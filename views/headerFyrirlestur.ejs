@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        <%= title %>
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto+Mono:400,700" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <% lectures.forEach((lec) => { %>
+    <% if (lec.slug === slug) { %>
+    <div class="heading" style="background-image: url(<%= lec.image %>);">
+        <span class="heading__category">
+            <%= lec.category %>
+        </span>
+        <h1 class="heading__title">
+            <%= lec.title %>
+        </h1>
+    </div>
+    <%}%>
+    <% }) %>

@@ -17,7 +17,7 @@ function createHtml() {
     'Hnoða',
     'Lyfta',
     'Baka',
-    'Borða'
+    'Borða',
   ];
 
   steps.forEach((step) => {

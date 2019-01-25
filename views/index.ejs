@@ -1,0 +1,31 @@
+<%- include('headerIndex') -%>
+
+<div class="list">
+    <div class="list__row">
+        <% lectures.forEach((lec) => { %>
+        <div class="list__col">
+            <a class="listItem" href=<%=lec.slug %>>
+                <% if (lec.thumbnail) { %>
+                <div class="listItem__image">
+                    <img src=<%=lec.thumbnail %>>
+                    <% } else {%>
+                    <div class="listItem__image--empty">
+                        <%}%>
+                    </div>
+                    <div class="listItem__bottom">
+                        <div class="listItem__texts">
+                            <span class="listItem__category">
+                                <%=lec.category%>
+                            </span>
+                            <h2 class="listItem__title">
+                                <%= lec.title %>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <% }) %>
+        </div>
+    </div>
+
+    <%- include('footerIndex') -%>

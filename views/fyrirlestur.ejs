@@ -1,0 +1,11 @@
+<%- include('headerFyrirlestur') -%>
+
+<% lectures.forEach((lec) => { %>
+<% if (lec.slug === slug) { %>
+<div>
+    <% content %>
+</div>
+<%}%>
+<% }) %>
+
+<%- include('footerFyrirlestur') -%>
