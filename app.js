@@ -5,14 +5,14 @@ const path = require('path');
 
 const lectures = require('./lectures');
 
-const content = require('./content.js');
+// const content = require('./content');
 
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.locals.content = content;
+// app.locals.content = content;
 
 app.use(express.static(path.join(__dirname, 'public')));
 

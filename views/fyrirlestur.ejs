@@ -3,7 +3,7 @@
 <% lectures.forEach((lec) => { %>
 <% if (lec.slug === slug) { %>
 <div>
-    <% content %>
+    <%- html.outerHTML -%>
 </div>
 <%}%>
 <% }) %>
